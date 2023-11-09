@@ -65,6 +65,6 @@ public class App
             jogadorDaVez = jogador1;
         }
         tabuleiro.Exibir();
-        System.out.printf("\nJOGO ENCERRADO!\nO jogador vencedor foi: %s", jogadorDaVez.getNome());
+        System.out.printf("\nJOGO ENCERRADO!!!!!!\nO jogador vencedor foi: %s", jogadorDaVez.getNome());
     }
 }

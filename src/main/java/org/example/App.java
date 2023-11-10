@@ -1,7 +1,10 @@
 package org.example;
 
+import org.example.Domain.Jogada;
 import org.example.Domain.Jogador;
 import org.example.Domain.Tabuleiro;
+import org.example.Lig4Exceptions.ColunaCompletaException;
+import org.example.Lig4Exceptions.ColunaInvalidaException;
 
 import java.util.Scanner;
 
@@ -23,18 +26,30 @@ public class App
 
         Jogador jogadorDaVez = jogador1;
         boolean jogadorVenceu;
+        Jogada jogada = null;
         do {
             //inserir código para limpar o console
-
             tabuleiro.Exibir();
             System.out.printf("\n%s, é a sua vez de jogar, seu símbolo é o {%s}", jogadorDaVez.getNome(), jogadorDaVez.getSimbolo());
             System.out.println("\nescolha uma coluna para fazer uma jogada");
-            int jogada = sc.nextInt();
+            int colunaEscolhida = sc.nextInt();
+            boolean jogadaValida;
+            do {
+                jogadaValida = true;
+                try {
+                    jogada = jogadorDaVez.Jogar(colunaEscolhida);
+                } catch (ColunaInvalidaException ex){
+                    System.out.println(ex.getMessage());
+                    jogadaValida = false;
+                    colunaEscolhida = sc.nextInt();
+                }
+            } while (!jogadaValida);
+
 
             try {
-                jogadorDaVez.Jogar(tabuleiro, jogada);
-                System.out.printf("\nA coluna %d, será preenchida com %s", jogada,jogadorDaVez.getSimbolo());
-            } catch (IllegalArgumentException ex) {
+                tabuleiro.AtualizaTabuleiro(jogada);
+                System.out.printf("\nA coluna %d, será preenchida com %s\n", jogada.getColunaEscolhida(),jogada.getSimbolo());
+            } catch (ColunaCompletaException ex) {
                 System.out.println(ex.getMessage());
                 Thread.sleep(2000);
                 // tentar eliminar esse monte de inversão com o break <label>
@@ -65,6 +80,7 @@ public class App
             jogadorDaVez = jogador1;
         }
         tabuleiro.Exibir();
-        System.out.printf("\nJOGO ENCERRADO!!!!!!\nO jogador vencedor foi: %s", jogadorDaVez.getNome());
+        System.out.printf("\nJOGO ENCERRADO!!!!!!\nO " +
+                "jogador vencedor foi: %s", jogadorDaVez.getNome());
     }
 }

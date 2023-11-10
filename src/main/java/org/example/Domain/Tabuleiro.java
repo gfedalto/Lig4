@@ -1,5 +1,7 @@
 package org.example.Domain;
 
+import org.example.Lig4Exceptions.ColunaCompletaException;
+
 public class Tabuleiro {
 
     public String[][] Posicoes = new String[6][7];
@@ -14,8 +16,19 @@ public class Tabuleiro {
         }
     }
 
-    public void Exibir ()
-    {
+    public void AtualizaTabuleiro (Jogada jogada) throws ColunaCompletaException{
+        for (int i = 5; i >= 0; i--) {
+            if (this.Posicoes[i][jogada.getColunaEscolhida() - 1].equals("[ ]")) {
+                this.Posicoes[i][jogada.getColunaEscolhida() - 1] = String.format("[%s]", jogada.getSimbolo());
+                i = -1; //para sair do loop
+            }
+            if (i == 0) {
+                throw new ColunaCompletaException();
+            }
+        }
+    }
+        public void Exibir() {
+
         for (int i = 0; i < 6; i++)
         {
             for (int j = 0; j < 7; j++)

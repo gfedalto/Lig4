@@ -5,12 +5,13 @@ import org.example.Lig4Exceptions.ColunaCompletaException;
 import org.example.Lig4Exceptions.ColunaInvalidaException;
 import org.example.Lig4Exceptions.TerceiroJogadorException;
 
+@Getter
 public class Jogador {
-    @Getter String nome;
+    String nome;
 
     enum Marcador { X, O }
 
-    @Getter Marcador simbolo;
+    Marcador simbolo;
 
     static int contador = 0;
 
@@ -23,21 +24,7 @@ public class Jogador {
         contador++;
     }
 
-    public void Jogar(Tabuleiro tabuleiro, int colunaEscolhida) throws ColunaCompletaException, ColunaInvalidaException {
-        if(colunaEscolhida < 1 || colunaEscolhida > 7) {
-            throw new ColunaInvalidaException();
-        }
-
-        for (int i = 5; i >= 0 ; i--) {
-            if(tabuleiro.Posicoes[i][colunaEscolhida - 1].equals("[ ]"))
-            {
-                tabuleiro.Posicoes[i][colunaEscolhida - 1] = String.format("[%s]", simbolo);
-                i = -1; //para sair do loop
-            }
-            if (i == 0) {throw new ColunaCompletaException();}
-            // caso o loop chegue ao fim sem passar pelo if anterior,
-            // quer dizer que todos os valores da coluna estão preenchidos
-            // então será lançado o erro
-        }
+    public Jogada Jogar(int colunaEscolhida) throws ColunaCompletaException {
+            return new Jogada (colunaEscolhida, this.simbolo.toString());
     }
 }

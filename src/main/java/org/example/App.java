@@ -52,8 +52,7 @@ public class App
             } catch (ColunaCompletaException ex) {
                 System.out.println(ex.getMessage());
                 Thread.sleep(2000);
-                // tentar eliminar esse monte de inversão com o break <label>
-                // tentar usar uma fila para armazenar e trocar os dois jogadores ao invés do if
+                // MELHORAR A TROCA DE JOGADORES
                 if (jogadorDaVez == jogador1) {
                     jogadorDaVez = jogador2;
                 } else {

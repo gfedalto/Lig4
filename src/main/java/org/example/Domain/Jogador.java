@@ -2,18 +2,14 @@ package org.example.Domain;
 
 import lombok.Getter;
 import org.example.Lig4Exceptions.ColunaCompletaException;
-import org.example.Lig4Exceptions.ColunaInvalidaException;
 import org.example.Lig4Exceptions.TerceiroJogadorException;
 
 @Getter
 public class Jogador {
-    String nome;
-
-    enum Marcador { X, O }
-
-    Marcador simbolo;
-
-    static int contador = 0;
+    private final String nome;
+    private enum Marcador { X, O }
+    private Marcador simbolo;
+    private static int contador = 0;
 
     public Jogador(String nome) {
         if (contador > 1) {

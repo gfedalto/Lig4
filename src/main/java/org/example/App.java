@@ -29,37 +29,29 @@ public class App
             tabuleiro.Exibir();
             System.out.printf("\n%s, é a sua vez de jogar, seu símbolo é o {%s}", jogadorDaVez.getNome(), jogadorDaVez.getSimbolo());
             System.out.println("\nescolha uma coluna para fazer uma jogada");
-            int colunaEscolhida = sc.nextInt();
+
             boolean jogadaValida;
             do {
                 jogadaValida = true;
+                int colunaEscolhida = sc.nextInt();
                 try {
                     jogada = jogadorDaVez.Jogar(colunaEscolhida);
-                } catch (ColunaInvalidaException ex){
+                    tabuleiro.AtualizaTabuleiro(jogada);
+                    System.out.printf("\nA coluna %d, será preenchida com %s\n", jogada.getColunaEscolhida(),jogada.getSimbolo());
+                } catch (ColunaInvalidaException | ColunaCompletaException ex){
                     System.out.println(ex.getMessage());
+                    Thread.sleep(2000);
                     jogadaValida = false;
-                    colunaEscolhida = sc.nextInt();
                 }
             } while (!jogadaValida);
 
-
-            try {
-                tabuleiro.AtualizaTabuleiro(jogada);
-                System.out.printf("\nA coluna %d, será preenchida com %s\n", jogada.getColunaEscolhida(),jogada.getSimbolo());
-            } catch (ColunaCompletaException ex) {
-                System.out.println(ex.getMessage());
-                Thread.sleep(2000);
-                jogadorDaVez = alternaJogadorDaVez(jogadorDaVez, jogador1, jogador2);
-            }
-
             jogadorVenceu = tabuleiro.VerificaVitoria();
-            jogadorDaVez = alternaJogadorDaVez(jogadorDaVez, jogador1, jogador2);
+            if (!jogadorVenceu) jogadorDaVez = alternaJogadorDaVez(jogadorDaVez, jogador1, jogador2);
 
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
         } while (!jogadorVenceu);
 
-        jogadorDaVez = alternaJogadorDaVez(jogadorDaVez, jogador1, jogador2);
         tabuleiro.Exibir();
         System.out.printf("\nJOGO ENCERRADO!!!!!!!!\nO " +
                 "jogador vencedor foi: %s", jogadorDaVez.getNome());

@@ -4,9 +4,9 @@ import lombok.Getter;
 import org.example.Lig4Exceptions.ColunaInvalidaException;
 
 public class Jogada {
-    @Getter public int colunaEscolhida;
+    @Getter private int colunaEscolhida;
 
-    @Getter public String simbolo;
+    @Getter private String simbolo;
 
     public Jogada (int colunaEscolhida, String simbolo) {
         if (colunaEscolhida < 1 || colunaEscolhida > 7) {
@@ -16,7 +16,6 @@ public class Jogada {
         this.simbolo = simbolo;
     }
 
-    public Jogada () {}
 
     public void setColunaEscolhida(int colunaEscolhida) {
         if (colunaEscolhida < 1 || colunaEscolhida > 7) {

@@ -4,7 +4,7 @@ import org.example.Lig4Exceptions.ColunaCompletaException;
 
 public class Tabuleiro {
 
-    public String[][] Posicoes = new String[6][7];
+    private String[][] Posicoes = new String[6][7];
     public Tabuleiro()
     {
         for (int i = 0; i < 6; i++)

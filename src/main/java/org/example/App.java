@@ -20,7 +20,7 @@ public class App
         Jogador jogador2 = new Jogador(sc.nextLine());
 
         var tabuleiro = new Tabuleiro();
-        Jogada jogada = null;
+        Jogada jogada;
         boolean jogadorVenceu;
         Jogador jogadorDaVez = jogador1;
 
@@ -53,8 +53,9 @@ public class App
         } while (!jogadorVenceu);
 
         tabuleiro.Exibir();
-        System.out.printf("\nJOGO ENCERRADO!!!!!!!!\nO " +
-                "jogador vencedor foi: %s", jogadorDaVez.getNome());
+        System.out.printf("""
+                JOGO ENCERRADO!!!!!!!!
+                O jogador vencedor foi: %s""", jogadorDaVez.getNome());
     }
 
     private static Jogador alternaJogadorDaVez(Jogador jogadorDaVez, Jogador jogador1, Jogador jogador2) {

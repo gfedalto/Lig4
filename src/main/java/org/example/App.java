@@ -54,7 +54,7 @@ public class App
 
         tabuleiro.Exibir();
         System.out.printf("""
-                JOGO ENCERRADO!!!!!!!!
+                JOGO ENCERRADO!!!!!!!
                 O jogador vencedor foi: %s""", jogadorDaVez.getNome());
     }
 

@@ -5,22 +5,30 @@ import org.example.Domain.Jogador;
 import org.example.Domain.Tabuleiro;
 import org.example.Lig4Exceptions.ColunaCompletaException;
 import org.example.Lig4Exceptions.ColunaInvalidaException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
 public class App 
 {
+    private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
     public static void main( String[] args ) throws InterruptedException {
+        LocalDateTime start = LocalDateTime.now();
         Scanner sc = new Scanner(System.in);
+        LOGGER.info("Iniciando o Programa");
 
         System.out.println("Bem vindo ao liga 4\n");
         System.out.println("Digite o nome do primeiro jogador");
         Jogador jogador1 = new Jogador(sc.nextLine());
+        LOGGER.info("Jogador 1:" + jogador1.getNome());
         System.out.println("Digite o nome do segundo jogador");
         Jogador jogador2 = new Jogador(sc.nextLine());
-
+        LOGGER.info("Jogador 2:" + jogador2.getNome());
         var tabuleiro = new Tabuleiro();
-        Jogada jogada;
+        Jogada jogada = null;
         boolean jogadorVenceu;
         Jogador jogadorDaVez = jogador1;
 
@@ -44,6 +52,7 @@ public class App
                     jogadaValida = false;
                 }
             } while (!jogadaValida);
+            LOGGER.info(jogadorDaVez.getNome() + " jogou na coluna " + jogada.getColunaEscolhida());
 
             jogadorVenceu = tabuleiro.VerificaVitoria();
             if (!jogadorVenceu) jogadorDaVez = alternaJogadorDaVez(jogadorDaVez, jogador1, jogador2);
@@ -56,6 +65,9 @@ public class App
         System.out.printf("""
                 JOGO ENCERRADO!!!!!!!!
                 O jogador vencedor foi: %s""", jogadorDaVez.getNome());
+        LocalDateTime end = LocalDateTime.now();
+        long between = ChronoUnit.SECONDS.between(start, end);
+        LOGGER.info(jogadorDaVez.getNome() + " venceu a partida, com duração de " + between + " segundos" );
     }
 
     private static Jogador alternaJogadorDaVez(Jogador jogadorDaVez, Jogador jogador1, Jogador jogador2) {

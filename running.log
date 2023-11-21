@@ -1,0 +1,11 @@
+23:25:36.274 501  [main] INFO  org.example.App - Iniciando o Programa
+23:25:38.281 2508 [main] INFO  org.example.App - Jogador 1:geo
+23:25:41.943 6170 [main] INFO  org.example.App - Jogador 2:ber
+23:25:42.861 7088 [main] INFO  org.example.App - geo jogou na coluna 1
+23:25:45.764 9991 [main] INFO  org.example.App - ber jogou na coluna 5
+23:25:48.952 13179 [main] INFO  org.example.App - geo jogou na coluna 2
+23:25:51.565 15792 [main] INFO  org.example.App - ber jogou na coluna 7
+23:25:54.080 18307 [main] INFO  org.example.App - geo jogou na coluna 3
+23:25:56.936 21163 [main] INFO  org.example.App - ber jogou na coluna 6
+23:25:59.785 24012 [main] INFO  org.example.App - geo jogou na coluna 4
+23:26:01.794 26021 [main] INFO  org.example.App - geo venceu a partida, com duração de 25 segundos

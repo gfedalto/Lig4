@@ -68,7 +68,7 @@ public class App
                 O jogador vencedor foi: %s""", jogadorDaVez.getNome());
         LocalDateTime end = LocalDateTime.now();
         long between = ChronoUnit.SECONDS.between(start, end);
-        LOGGER.info(jogadorDaVez.getNome() + " venceu a partida, com duração de " + between + " segundos" );
+        LOGGER.info(jogadorDaVez.getNome() + " venceu a partida, com duração de " + between + " segundos");
     }
 
     private static Jogador alternaJogadorDaVez(Jogador jogadorDaVez, Jogador jogador1, Jogador jogador2) {

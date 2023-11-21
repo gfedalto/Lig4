@@ -54,7 +54,6 @@ public class App
                 }
             } while (!jogadaValida);
             LOGGER.info(jogadorDaVez.getNome() + " jogou na coluna " + jogada.getColunaEscolhida());
-
             jogadorVenceu = tabuleiro.VerificaVitoria();
             if (!jogadorVenceu) jogadorDaVez = alternaJogadorDaVez(jogadorDaVez, jogador1, jogador2);
 

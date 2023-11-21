@@ -1,24 +1,27 @@
-<configuration>
+<configuration debug="true">
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
 
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <appender name="LOG" class="ch.qos.logback.core.FileAppender">
+        <file>running.log</file>
+        <append>true</append>
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} %-4relative %-5level %logger{55} - %msg%n</pattern>
         </encoder>
     </appender>
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>running.log</file>
+    <appender name="LASTGAME" class="ch.qos.logback.core.FileAppender">
+        <file>lastgame.log</file>
         <append>false</append>
         <!-- set immediateFlush to false for much higher logging throughput -->
         <immediateFlush>true</immediateFlush>
         <!-- encoders are assigned the type
              ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
-    <root level="info">
-        <appender-ref ref="FILE" />
+    <root level="debug">
+        <appender-ref ref="LASTGAME" />
+        <appender-ref ref="LOG" />
     </root>
 
 

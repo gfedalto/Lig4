@@ -18,15 +18,15 @@ public class App
     public static void main( String[] args ) throws InterruptedException {
         LocalDateTime start = LocalDateTime.now();
         Scanner sc = new Scanner(System.in);
-        LOGGER.info("Iniciando o Programa");
+        LOGGER.info("Iniciando nova partida");
 
         System.out.println("Bem vindo ao liga 4\n");
         System.out.println("Digite o nome do primeiro jogador");
         Jogador jogador1 = new Jogador(sc.nextLine());
-        LOGGER.info("Jogador 1:" + jogador1.getNome());
+        LOGGER.info("Jogador 1: " + jogador1.getNome());
         System.out.println("Digite o nome do segundo jogador");
         Jogador jogador2 = new Jogador(sc.nextLine());
-        LOGGER.info("Jogador 2:" + jogador2.getNome());
+        LOGGER.info("Jogador 2: " + jogador2.getNome());
         var tabuleiro = new Tabuleiro();
         Jogada jogada = null;
         boolean jogadorVenceu;
@@ -50,6 +50,7 @@ public class App
                     System.out.println(ex.getMessage());
                     Thread.sleep(2000);
                     jogadaValida = false;
+                    LOGGER.error("Erro detectado: ",ex);
                 }
             } while (!jogadaValida);
             LOGGER.info(jogadorDaVez.getNome() + " jogou na coluna " + jogada.getColunaEscolhida());
@@ -71,6 +72,7 @@ public class App
     }
 
     private static Jogador alternaJogadorDaVez(Jogador jogadorDaVez, Jogador jogador1, Jogador jogador2) {
+        LOGGER.debug("Executando método de troca de jogador");
         if (jogadorDaVez == jogador1) {
             jogadorDaVez = jogador2;
         } else {

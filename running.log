@@ -1,11 +1,78 @@
-23:25:36.274 501  [main] INFO  org.example.App - Iniciando o Programa
-23:25:38.281 2508 [main] INFO  org.example.App - Jogador 1:geo
-23:25:41.943 6170 [main] INFO  org.example.App - Jogador 2:ber
-23:25:42.861 7088 [main] INFO  org.example.App - geo jogou na coluna 1
-23:25:45.764 9991 [main] INFO  org.example.App - ber jogou na coluna 5
-23:25:48.952 13179 [main] INFO  org.example.App - geo jogou na coluna 2
-23:25:51.565 15792 [main] INFO  org.example.App - ber jogou na coluna 7
-23:25:54.080 18307 [main] INFO  org.example.App - geo jogou na coluna 3
-23:25:56.936 21163 [main] INFO  org.example.App - ber jogou na coluna 6
-23:25:59.785 24012 [main] INFO  org.example.App - geo jogou na coluna 4
-23:26:01.794 26021 [main] INFO  org.example.App - geo venceu a partida, com duração de 25 segundos
+12:34:11.554 479  [main] INFO  org.example.App - Iniciando nova partida
+12:34:26.302 15227 [main] INFO  org.example.App - Jogador 1: geo
+12:34:26.758 15683 [main] INFO  org.example.App - Jogador 2: p
+12:34:29.475 18400 [main] INFO  org.example.App - geo jogou na coluna 1
+12:36:16.003 [main] INFO  o.e.App - Iniciando nova partida
+12:36:18.600 [main] INFO  o.e.App - Jogador 1: geo
+12:36:19.564 [main] INFO  o.e.App - Jogador 2: a
+12:36:23.298 [main] INFO  o.e.App - geo jogou na coluna 1
+12:36:28.433 [main] INFO  o.e.App - a jogou na coluna 2
+12:39:02.022 [main] INFO  o.e.App - Iniciando nova partida
+12:39:05.201 [main] INFO  o.e.App - Jogador 1: geo
+12:39:11.978 [main] INFO  o.e.App - Jogador 2: geovanni
+12:39:13.269 [main] INFO  o.e.App - geo jogou na coluna 1
+12:39:15.915 [main] INFO  o.e.App - geovanni jogou na coluna 5
+12:39:18.650 [main] INFO  o.e.App - geo jogou na coluna 2
+12:39:21.254 [main] INFO  o.e.App - geovanni jogou na coluna 6
+12:39:23.884 [main] INFO  o.e.App - geo jogou na coluna 3
+12:39:26.538 [main] INFO  o.e.App - geovanni jogou na coluna 6
+12:39:29.609 [main] INFO  o.e.App - geo jogou na coluna 4
+12:39:31.626 [main] INFO  o.e.App - geo venceu a partida, com duração de 29 segundos
+12:40:02.052 [main] INFO  o.e.App - Iniciando nova partida
+12:40:04.892 [main] INFO  o.e.App - Jogador 1: a
+12:40:05.554 [main] INFO  o.e.App - Jogador 2: b
+12:40:09.201 [main] ERROR o.e.App - Erro detectado: 
+org.example.Lig4Exceptions.ColunaInvalidaException: Valor da coluna inválido. Escolher um número entre 1 e 7. Escolha um novo valor
+	at org.example.Domain.Jogada.<init>(Jogada.java:13)
+	at org.example.Domain.Jogador.Jogar(Jogador.java:24)
+	at org.example.App.main(App.java:46)
+12:40:09.978 [main] INFO  o.e.App - a jogou na coluna 1
+12:40:12.641 [main] INFO  o.e.App - b jogou na coluna 1
+12:40:15.188 [main] INFO  o.e.App - a jogou na coluna 1
+12:40:17.772 [main] INFO  o.e.App - b jogou na coluna 1
+12:40:20.286 [main] INFO  o.e.App - a jogou na coluna 1
+12:40:23.022 [main] INFO  o.e.App - b jogou na coluna 1
+12:40:27.684 [main] ERROR o.e.App - Erro detectado: 
+org.example.Lig4Exceptions.ColunaCompletaException: Esta coluna está completa, escolha outra com espaços sobrando para jogar!
+	at org.example.Domain.Tabuleiro.AtualizaTabuleiro(Tabuleiro.java:26)
+	at org.example.App.main(App.java:47)
+12:40:29.446 [main] INFO  o.e.App - a jogou na coluna 2
+13:05:05.550 INFO org.example.App - Iniciando nova partida
+13:05:12.189 INFO org.example.App - Jogador 1: teste
+13:05:13.118 INFO org.example.App - Jogador 2: a
+13:05:13.875 INFO org.example.App - teste jogou na coluna 1
+13:06:43.049 org.example.App - Iniciando nova partida
+13:06:44.128 org.example.App - Jogador 1: geo
+13:06:44.517 org.example.App - Jogador 2: a
+13:06:45.462 org.example.App - geo jogou na coluna 1
+13:07:19.679 INFO org.example.App - Iniciando nova partida
+13:07:22.533 INFO org.example.App - Jogador 1: a
+13:07:23.275 INFO org.example.App - Jogador 2: b
+13:07:27.143 ERROR org.example.App - Erro detectado: 
+org.example.Lig4Exceptions.ColunaInvalidaException: Valor da coluna inválido. Escolher um número entre 1 e 7. Escolha um novo valor
+	at org.example.Domain.Jogada.<init>(Jogada.java:13)
+	at org.example.Domain.Jogador.Jogar(Jogador.java:24)
+	at org.example.App.main(App.java:46)
+13:07:28.993 INFO org.example.App - a jogou na coluna 2
+13:14:13.696 INFO  org.example.App - Iniciando nova partida
+13:14:17.960 INFO  org.example.App - Jogador 1: a
+13:14:18.702 INFO  org.example.App - Jogador 2: b
+13:14:20.130 INFO  org.example.App - a jogou na coluna 2
+13:14:24.142 ERROR org.example.App - Erro detectado: 
+org.example.Lig4Exceptions.ColunaInvalidaException: Valor da coluna inválido. Escolher um número entre 1 e 7. Escolha um novo valor
+	at org.example.Domain.Jogada.<init>(Jogada.java:13)
+	at org.example.Domain.Jogador.Jogar(Jogador.java:24)
+	at org.example.App.main(App.java:46)
+13:14:24.145 INFO  org.example.App - b jogou na coluna 1
+13:27:10.188 694  INFO  org.example.App - Iniciando nova partida
+13:27:13.915 4421 INFO  org.example.App - Jogador 1: a
+13:27:14.556 5062 INFO  org.example.App - Jogador 2: b
+13:27:15.394 5900 INFO  org.example.App - a jogou na coluna 1
+13:27:15.394 5900 DEBUG org.example.App - Executando método de troca de jogador
+13:27:19.419 9925 ERROR org.example.App - Erro detectado: 
+org.example.Lig4Exceptions.ColunaInvalidaException: Valor da coluna inválido. Escolher um número entre 1 e 7. Escolha um novo valor
+	at org.example.Domain.Jogada.<init>(Jogada.java:13)
+	at org.example.Domain.Jogador.Jogar(Jogador.java:24)
+	at org.example.App.main(App.java:46)
+13:27:19.421 9927 INFO  org.example.App - b jogou na coluna 2
+13:27:19.422 9928 DEBUG org.example.App - Executando método de troca de jogador

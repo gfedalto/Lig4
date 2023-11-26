@@ -4,7 +4,6 @@ import org.example.Domain.Jogador;
 import org.example.Domain.Tabuleiro;
 import org.example.Lig4Exceptions.ColunaCompletaException;
 import org.example.Lig4Exceptions.ColunaInvalidaException;
-import org.example.Lig4Exceptions.TerceiroJogadorException;
 import org.junit.jupiter.api.DisplayName;
 import  org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

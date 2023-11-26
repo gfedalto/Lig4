@@ -76,3 +76,71 @@ org.example.Lig4Exceptions.ColunaInvalidaException: Valor da coluna inválido. E
 	at org.example.App.main(App.java:46)
 13:27:19.421 9927 INFO  org.example.App - b jogou na coluna 2
 13:27:19.422 9928 DEBUG org.example.App - Executando método de troca de jogador
+22:53:11.360 1036 INFO  org.example.App - Iniciando nova partida
+22:53:18.805 8481 INFO  org.example.App - Jogador 1: Geo
+22:53:20.482 10158 INFO  org.example.App - Jogador 2: Ber
+22:53:53.156 42832 INFO  org.example.App - Geo jogou na coluna 4
+22:53:53.156 42832 DEBUG org.example.App - Executando método de troca de jogador
+22:54:11.435 61111 INFO  org.example.App - Ber jogou na coluna 4
+22:54:11.435 61111 DEBUG org.example.App - Executando método de troca de jogador
+22:54:15.430 65106 INFO  org.example.App - Geo jogou na coluna 2
+22:54:15.430 65106 DEBUG org.example.App - Executando método de troca de jogador
+22:54:25.059 74735 INFO  org.example.App - Ber jogou na coluna 3
+22:54:25.059 74735 DEBUG org.example.App - Executando método de troca de jogador
+22:54:31.135 80811 INFO  org.example.App - Geo jogou na coluna 3
+22:54:31.135 80811 DEBUG org.example.App - Executando método de troca de jogador
+22:54:43.564 93240 INFO  org.example.App - Ber jogou na coluna 2
+22:54:43.564 93240 DEBUG org.example.App - Executando método de troca de jogador
+22:54:51.104 100780 INFO  org.example.App - Geo jogou na coluna 4
+22:54:51.104 100780 DEBUG org.example.App - Executando método de troca de jogador
+22:54:58.948 108624 INFO  org.example.App - Ber jogou na coluna 5
+22:54:58.948 108624 DEBUG org.example.App - Executando método de troca de jogador
+22:55:02.260 111936 INFO  org.example.App - Geo jogou na coluna 5
+22:55:02.260 111936 DEBUG org.example.App - Executando método de troca de jogador
+22:55:08.251 117927 INFO  org.example.App - Ber jogou na coluna 5
+22:55:08.251 117927 DEBUG org.example.App - Executando método de troca de jogador
+22:55:11.533 121209 INFO  org.example.App - Geo jogou na coluna 5
+22:55:13.546 123222 INFO  org.example.App - Geo venceu a partida, com duração de 122 segundos
+22:56:12.660 674  INFO  org.example.App - Iniciando nova partida
+22:56:15.974 3988 INFO  org.example.App - Jogador 1: Ber
+22:56:17.113 5127 INFO  org.example.App - Jogador 2: Geo
+22:56:22.781 10795 ERROR org.example.App - Erro detectado: 
+org.example.Lig4Exceptions.ColunaInvalidaException: Valor da coluna inválido. Escolher um número entre 1 e 7. Escolha um novo valor
+	at org.example.Domain.Jogada.<init>(Jogada.java:13)
+	at org.example.Domain.Jogador.Jogar(Jogador.java:24)
+	at org.example.App.main(App.java:46)
+22:56:26.411 14425 INFO  org.example.App - Ber jogou na coluna 7
+22:56:26.412 14426 DEBUG org.example.App - Executando método de troca de jogador
+22:56:30.412 18426 INFO  org.example.App - Geo jogou na coluna 3
+22:56:30.412 18426 DEBUG org.example.App - Executando método de troca de jogador
+22:56:34.402 22416 INFO  org.example.App - Ber jogou na coluna 7
+22:56:34.403 22417 DEBUG org.example.App - Executando método de troca de jogador
+22:56:41.982 29996 INFO  org.example.App - Geo jogou na coluna 2
+22:56:41.982 29996 DEBUG org.example.App - Executando método de troca de jogador
+22:56:59.215 47229 INFO  org.example.App - Ber jogou na coluna 1
+22:56:59.215 47229 DEBUG org.example.App - Executando método de troca de jogador
+22:57:06.627 54641 INFO  org.example.App - Geo jogou na coluna 4
+22:57:06.627 54641 DEBUG org.example.App - Executando método de troca de jogador
+22:57:11.537 59551 INFO  org.example.App - Ber jogou na coluna 5
+22:57:11.537 59551 DEBUG org.example.App - Executando método de troca de jogador
+22:57:16.810 64824 INFO  org.example.App - Geo jogou na coluna 3
+22:57:16.810 64824 DEBUG org.example.App - Executando método de troca de jogador
+22:57:21.851 69865 INFO  org.example.App - Ber jogou na coluna 7
+22:57:21.851 69865 DEBUG org.example.App - Executando método de troca de jogador
+22:57:25.318 73332 INFO  org.example.App - Geo jogou na coluna 7
+22:57:25.318 73332 DEBUG org.example.App - Executando método de troca de jogador
+22:57:33.123 81137 INFO  org.example.App - Ber jogou na coluna 6
+22:57:33.123 81137 DEBUG org.example.App - Executando método de troca de jogador
+22:57:45.095 93109 INFO  org.example.App - Geo jogou na coluna 4
+22:57:45.096 93110 DEBUG org.example.App - Executando método de troca de jogador
+22:57:51.216 99230 INFO  org.example.App - Ber jogou na coluna 6
+22:57:51.216 99230 DEBUG org.example.App - Executando método de troca de jogador
+22:58:00.675 108689 INFO  org.example.App - Geo jogou na coluna 6
+22:58:00.675 108689 DEBUG org.example.App - Executando método de troca de jogador
+22:58:09.017 117031 INFO  org.example.App - Ber jogou na coluna 1
+22:58:09.017 117031 DEBUG org.example.App - Executando método de troca de jogador
+22:58:12.425 120439 INFO  org.example.App - Geo jogou na coluna 5
+22:58:14.434 122448 INFO  org.example.App - Geo venceu a partida, com duração de 121 segundos
+09:09:46.455 650  INFO  org.example.App - Iniciando nova partida
+09:09:49.745 3940 INFO  org.example.App - Jogador 1: 3
+09:09:50.874 5069 INFO  org.example.App - Jogador 2: 2

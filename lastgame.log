@@ -1,12 +1,3 @@
-13:27:10.188 INFO  org.example.App - Iniciando nova partida
-13:27:13.915 INFO  org.example.App - Jogador 1: a
-13:27:14.556 INFO  org.example.App - Jogador 2: b
-13:27:15.394 INFO  org.example.App - a jogou na coluna 1
-13:27:15.394 DEBUG org.example.App - Executando método de troca de jogador
-13:27:19.419 ERROR org.example.App - Erro detectado: 
-org.example.Lig4Exceptions.ColunaInvalidaException: Valor da coluna inválido. Escolher um número entre 1 e 7. Escolha um novo valor
-	at org.example.Domain.Jogada.<init>(Jogada.java:13)
-	at org.example.Domain.Jogador.Jogar(Jogador.java:24)
-	at org.example.App.main(App.java:46)
-13:27:19.421 INFO  org.example.App - b jogou na coluna 2
-13:27:19.422 DEBUG org.example.App - Executando método de troca de jogador
+09:09:46.455 INFO  org.example.App - Iniciando nova partida
+09:09:49.745 INFO  org.example.App - Jogador 1: 3
+09:09:50.874 INFO  org.example.App - Jogador 2: 2
